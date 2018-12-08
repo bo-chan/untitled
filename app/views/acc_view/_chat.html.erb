@@ -12,8 +12,8 @@
   <tbody>
   <% entry_chats.each do |entry_chat| %>
     <tr>
-      <td><%=  entry_chat.id %></td>
-      <td><%= button_to entry_chat.chat_id ,jumps_path(entry_chat.chat_id), method: :get%></td>
+      <td><%= entry_chat.id %></td>
+      <td><%= button_to entry_chat.chat_id, controller: 'jumps', action: 'index', id: entry_chat.chat_id, method: :get %></td>
     </tr>
   <% end %>
   </tbody>

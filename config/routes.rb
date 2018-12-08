@@ -11,6 +11,6 @@ Rails.application.routes.draw do
   get '/mains/home', to: 'mains#home'
   get '/logins', to: 'login#index'
   get '/acc_views', to: 'acc_view#index'
-  get 'jumps/:id', to: 'jump#index'
+  get '/cushions/:id', to: 'jumps#index'
   get '/member', to: 'member#index'
 end
