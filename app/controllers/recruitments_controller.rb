@@ -42,7 +42,8 @@ class RecruitmentsController < ApplicationController
 
     respond_to do |format|
       if @recruitment.save
-        Tagmap.associate(@recruitment.id, current_account.acc_id)
+        tagarry=[params[:school], params[:faculty], params[:department], params[:tag1], params[:tag2], params[:tag3], params[:tag4], params[:tag5], params[:tag6], params[:tag7]]
+        Tagmap.associate(@recruitment.id, tagarry)
         format.html { redirect_to root_path, notice: '送信しました' }
         format.json { render :show, status: :created, location: @recruitment }
       else
